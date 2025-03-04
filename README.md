@@ -14,11 +14,13 @@
 ## Description
 
 This project is a fully functioning Google Books search engine that was originally built with a RESTful API and has been refactored to use GraphQL with Apollo Server. The app is built on the MERN stack:
+
 - **MongoDB** for the database
 - **Express.js** and **Node.js** for the back-end server
 - **React** for the front-end user interface
 
 Key features include:
+
 - **Search**: Query the Google Books API for books.
 - **Save Books**: Users can save their favorite book searches to the back end.
 - **Authentication**: Secure sign up and login with authentication middleware adapted for GraphQL.
@@ -31,6 +33,22 @@ Key features include:
 - **Apollo Provider Integration**: The React front-end is wrapped in an Apollo Provider so that all requests communicate seamlessly with the Apollo Server.
 - **MERN Stack**: Built using MongoDB, Express.js, React, and Node.js.
 
+## Table Of Contents
+
+- [GraphQL Google Books Search Engine](#graphql-google-books-search-engine)
+  - [Description](#description)
+  - [Features](#features)
+  - [Table Of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Preview images of the deployed application.](#preview-images-of-the-deployed-application)
+    - [🚀 **Try the live Book Search Engine on Render**](#-try-the-live-book-search-engine-on-render)
+    - [Project Structure](#project-structure)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
 ## Installation
 
 1. **Clone the repository:**
@@ -38,6 +56,8 @@ Key features include:
    ```bash
    git clone https://github.com/snabaj/book-search-engine.git
    cd book-search-engine
+
+   ```
 
 2. Install dependencies:
    ```
@@ -51,47 +71,49 @@ Key features include:
    ```
    npm run develop
    ```
+
 ## Usage
+
 - **Searching for Books:**
-  
+
   Use the search functionality on the front end to query the Google Books API. Results will display with an option to save them to your account.
 
 - **User Signup/Login:**
-  
+
   Create an account or log in using the provided forms. Once authenticated, you can save your favorite books.
 
 - **Saving & Removing Books:**
-  
+
   Use the intuitive UI to save books to your profile or remove them as needed. All operations are handled through GraphQL mutations.
 
 ### Preview images of the deployed application.
 
-### Search for book
+**Search for book**
 
-### Sign up/login
+**Sign up/login**
 
-### Saved books
+**Saved books**
 
 ### 🚀 **[Try the live Book Search Engine on Render](https://REPLACE-rv08.onrender.com)**
 
 ### Project Structure
 
 - **`server`**
- 
+
   Contains the Node.js/Express server configured with Apollo Server for GraphQL.
 
-    - `models` – MongoDB models.
-    - `resolvers` – GraphQL resolvers for Query and Mutation operations.
-    - `typeDefs` – GraphQL schema definitions.
-    - `auth.js` – Authentication middleware modified for GraphQL.
-  
-- **`client`**
-    
-    Contains the React front end.
+  - `models` – MongoDB models.
+  - `resolvers` – GraphQL resolvers for Query and Mutation operations.
+  - `typeDefs` – GraphQL schema definitions.
+  - `auth.js` – Authentication middleware modified for GraphQL.
 
-    - `src/components` – React components (e.g., `SearchBooks.tsx`, `SavedBooks.tsx`, `SignupForm.tsx`, `LoginForm.tsx`).
-    - `src/utils` – GraphQL queries and mutations.
-    - `src/utils` – Utility functions including authentication, API calls, and local storage helpers.
+- **`client`**
+
+  Contains the React front end.
+
+  - `src/components` – React components (e.g., `SearchBooks.tsx`, `SavedBooks.tsx`, `SignupForm.tsx`, `LoginForm.tsx`).
+  - `src/utils` – GraphQL queries and mutations.
+  - `src/utils` – Utility functions including authentication, API calls, and local storage helpers.
 
 ## Contributing
 
@@ -103,9 +125,9 @@ Contributions are welcome! If you’d like to improve this project, follow these
    git checkout -b feature/your-feature
    ```
 3. Make your changes and commit:
-    ```
-    git commit -m "Add feature: description"
-    ```
+   ```
+   git commit -m "Add feature: description"
+   ```
 4. Push the branch:
    ```
    git push origin feature/your-feature
@@ -115,6 +137,7 @@ Contributions are welcome! If you’d like to improve this project, follow these
 Please ensure your code is well-documented and tested before submitting.
 
 ## License
+
 This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
 
 ## Tests
