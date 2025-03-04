@@ -57,7 +57,6 @@ const SearchBooks = () => {
         title: book.volumeInfo.title,
         description: book.volumeInfo.description,
         image: book.volumeInfo.imageLinks?.thumbnail || '',
-        // link: book.volumeInfo.infoLink || '',
       }));
 
       setSearchedBooks(bookData);
@@ -88,7 +87,7 @@ const SearchBooks = () => {
             description: bookToSave.description,
             title: bookToSave.title,
             image: bookToSave.image,
-            // link: bookToSave.link,
+            link: bookToSave.link,
           },
         },
       });
