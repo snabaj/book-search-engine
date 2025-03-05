@@ -44,9 +44,10 @@ const LoginForm = ({}: { handleModalClose: () => void }) => {
         },
       });
 
-      // Use the returned token to log the user in
+      //Use the returned token to log the user in
       const token = data.login.token;
       Auth.login(token);
+      // Auth.login(data.login.token);
     } catch (err) {
       console.error(err);
       setShowAlert(true);

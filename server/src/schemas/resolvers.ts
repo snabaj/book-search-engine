@@ -19,7 +19,7 @@ const resolvers = {
   },
 
   Mutation: {
-    login: async (_: any, { email, password }: { email: string; password: string }) => {
+    login: async (_parent: any, { email, password }: { email: string; password: string }) => {
      
       const user = await User.findOne({ email });
       if (!user) {
@@ -42,6 +42,7 @@ const resolvers = {
       if (!user) {
         throw new Error("Something is wrong!");
       }
+      console.log('addedUser')
       // Sign a token for the new user.
       const token = signToken(user.username, user.password, user._id);
       return { token, user };
