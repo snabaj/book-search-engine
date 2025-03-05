@@ -13,10 +13,7 @@ const server = new ApolloServer({
 
 const startApolloServer = async () => {
   await server.start();
-  await new Promise((resolve, reject) => {
-    db.once('open', resolve);
-    db.on('error', reject);
-  });
+  await db;
 
   const PORT = process.env.PORT || 3001;
   const app = express();
