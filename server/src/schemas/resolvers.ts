@@ -49,7 +49,7 @@ const resolvers = {
     },
 
     // Saves a book to the user's savedBooks array.
-    saveBook: async (_: any, { bookData }: { bookData: any }, context: any) => {
+    saveBook: async (_parent: any, { bookData }: { bookData: any }, context: any) => {
       // If you're not logged in, you can't save a book – it's like trying to add a book to a library you don't belong to.
       if (!context.user) {
         throw new Error("You need to be logged in!");

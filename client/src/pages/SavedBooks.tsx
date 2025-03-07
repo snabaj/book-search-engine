@@ -8,7 +8,7 @@ import type { User } from '../models/User';
 
 const SavedBooks = () => {
   // Execute the GET_ME query to load the user data
-  const { loading, data, refetch } = useQuery(GET_ME);
+  const { loading, error, data, refetch } = useQuery(GET_ME);
   // Set up the REMOVE_BOOK mutation
   const [removeBookMutation] = useMutation(REMOVE_BOOK);
 
@@ -16,8 +16,11 @@ const SavedBooks = () => {
     return <h2>LOADING...</h2>;
   }
 
+  if (error) return <h2>Error: {error.message}</h2>;
+  if (!data || !data.me) return <h2>No user data found.</h2>;
   // Destructure userData from the query response
   const userData: User = data.me;
+  //const userData: User = data?.me || {};
 
   // Function to handle deleting a book using the REMOVE_BOOK mutation
   const handleDeleteBook = async (bookId: string) => {
