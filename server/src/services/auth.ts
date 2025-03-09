@@ -15,7 +15,7 @@ export const authenticateToken = (req: Request, _res: Response, next: NextFuncti
   const authHeader = req.headers.authorization;
 
   if (!authHeader) {
-    throw new GraphQLError('Authorization token is requried', {
+    throw new GraphQLError('Authorization token is required', {
       extensions: {
         code: 'UNAUTHENTICATED',
       },
