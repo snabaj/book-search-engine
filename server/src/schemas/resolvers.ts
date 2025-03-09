@@ -31,7 +31,7 @@ const resolvers = {
         throw new Error("Wrong password!");
       }
       
-      const token = signToken(user.username, user.password, user._id);
+      const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },
 
@@ -44,7 +44,7 @@ const resolvers = {
       }
       console.log('addedUser')
       // Sign a token for the new user.
-      const token = signToken(user.username, user.password, user._id);
+      const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },
 
