@@ -4,8 +4,8 @@ import { signToken } from '../services/auth.js';
 const resolvers = {
   Query: {
     // This resolver returns the currently logged-in user's info.
-    me: async (_: any, context: any) => {
-      
+    me: async (_: any, _args: any, context: any) => {
+      console.log(context)
       if (!context.user) {
         throw new Error("You need to be logged in!");
       }
