@@ -88,13 +88,15 @@ Key features include:
 
 ### Preview images of the deployed application.
 
-**Search for book**
+**Search for books**
 
-**Sign up/login**
+![Home Page](<client/src/assets/Screenshot 2025-03-14 at 2.23.57 PM.png>)
 
-**Saved books**
+**View saved books**
 
-### 🚀 **[Try the live Book Search Engine on Render](https://REPLACE-rv08.onrender.com)**
+![Saved Books](<client/src/assets/Screenshot 2025-03-14 at 2.24.49 PM.png>)
+
+### 🚀 **[Try the live Book Search Engine on Render](https://book-search-engine-ulcz.onrender.com/)**
 
 ### Project Structure
 
@@ -102,7 +104,7 @@ Key features include:
 
   Contains the Node.js/Express server configured with Apollo Server for GraphQL.
 
-  - `models` – MongoDB models.
+  - `models/` – MongoDB models.
   - `resolvers` – GraphQL resolvers for Query and Mutation operations.
   - `typeDefs` – GraphQL schema definitions.
   - `auth.js` – Authentication middleware modified for GraphQL.
